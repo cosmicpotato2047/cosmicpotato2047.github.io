@@ -58,6 +58,7 @@ navigation:
 include:
   - _pages
   - assets
+  - _data
 sass:
   sass_dir: _sass
   style: compressed  # CSS 파일을 압축해서 최적화 (선택 사항)
