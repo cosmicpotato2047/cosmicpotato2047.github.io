@@ -1,0 +1,35 @@
+- id: "stock-bot"
+  title: "AI Stock Trading Bot"
+  date: "2024-03-01"
+  description: "자동으로 주식을 매매하는 AI 트레이딩 봇"
+  image: "/assets/images/stock-bot.png"
+  tech: ["Python", "TensorFlow", "Pandas"]
+  how_to_use: "/projects/stock-bot/"
+  making_of: "/projects/stock-bot-making/"
+
+- id: "smart-home"
+  title: "Smart Home Automation"
+  date: "2024-01-15"
+  description: "IoT 센서를 활용한 스마트 홈 시스템"
+  image: "/assets/images/smart-home.png"
+  tech: ["IoT", "Raspberry Pi", "MQTT"]
+  how_to_use: "/projects/smart-home/"
+  making_of: "/projects/smart-home-making/"
+
+- id: "finance-tracker"
+  title: "Personal Finance Tracker"
+  date: "2023-11-10"
+  description: "수입과 지출을 자동으로 관리하는 웹 애플리케이션"
+  image: "/assets/images/finance-tracker.png"
+  tech: ["React", "Node.js", "MongoDB"]
+  how_to_use: "/projects/finance-tracker/"
+  making_of: "/projects/finance-tracker-making/"
+
+- id: "spotify-profile"
+  title: "Spotify Profile"
+  date: "2023-09-01"
+  description: "Spotify 데이터를 시각화하는 웹 앱"
+  image: "/images/projects/spotify-profile.png"
+  tech: ["React", "Express", "Spotify API", "Heroku"]
+  how_to_use: "https://spotify-profile.herokuapp.com/"
+  github: "https://github.com/bchiang7/spotify-profile"

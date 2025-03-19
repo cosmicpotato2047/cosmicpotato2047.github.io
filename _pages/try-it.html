@@ -1,0 +1,199 @@
+---
+layout: default
+title: Playground
+permalink: /try-it/
+---
+
+{% assign roomCount = site.data.rooms | size %}
+
+{% include toast.html %}
+
+<div class="playground-container">
+  <!-- 좌측 패널 (방 선택 네비게이션) -->
+  <div id="roomNav" class="room-nav">
+    <div class="room-nav-content">
+      {% for room in site.data.rooms %}
+      <button class="room-btn" data-room="{{ room.id }}" aria-label="Go to {{ room.name }}">{{ room.name }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 방을 감싸는 컨테이너 (방 개수에 따라 동적 너비 적용) -->
+  <div class="room-container" style="width: {{ roomCount | times: 100 }};">
+    {% for room in site.data.rooms %}
+    <div class="room" id="{{ room.id }}">
+      <img src="{{ room.image }}" alt="{{ room.name }}">
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- 컨트롤 버튼 (사진 아래에 위치) -->
+  <div class="controls">
+    <button id="prevBtn" aria-label="Previous Room">&lt;&lt;</button>
+    <button id="mapBtn" aria-label="Toggle Map">Map</button>
+    <button id="nextBtn" aria-label="Next Room">&gt;&gt;</button>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const rooms = document.querySelector(".room-container");
+  const roomButtons = document.querySelectorAll(".room-btn");
+  const roomNav = document.getElementById("roomNav");
+
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const mapBtn = document.getElementById("mapBtn");
+
+  let currentIndex = 0;
+  const totalRooms = document.querySelectorAll('.room').length;
+
+  function goToRoom(index) {
+    rooms.style.transform = `translateX(-${index * 100}vw)`;
+    currentIndex = index;
+    roomNav.classList.remove("open"); // 사진 전환 시 네비게이션 숨기기
+  }
+
+  roomButtons.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      goToRoom(index);
+    });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      goToRoom(currentIndex - 1);
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < totalRooms - 1) {
+      goToRoom(currentIndex + 1);
+    }
+  });
+
+  mapBtn.addEventListener("click", () => {
+    roomNav.classList.toggle("open");
+  });
+
+  // 헤더 선택: .masthead, 푸터 선택: #footer
+  const header = document.querySelector('.masthead');
+  const footer = document.getElementById('footer');
+
+  if (header && footer && roomNav) {
+    function adjustNavPosition() {
+      const headerHeight = header.getBoundingClientRect().height;
+      const footerHeight = footer.getBoundingClientRect().height;
+      roomNav.style.top = headerHeight + "px";
+      roomNav.style.height = "calc(100% - " + headerHeight + "px - " + footerHeight + "px)";
+    }
+
+    adjustNavPosition();
+    window.addEventListener("resize", adjustNavPosition);
+  }
+});
+
+</script>
+
+<style>
+.playground-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* .room-container의 너비는 Liquid를 통해 동적으로 계산 */
+.room-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+}
+
+.room {
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 네비게이션 패널 */
+.room-nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #f8f9fa;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.room-nav.open {
+  left: 0;
+}
+
+.room-nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.room-btn {
+  padding: 8px 16px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  background: transparent;
+  color: #333;
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.room-btn:hover {
+  background: #f0f0f0;
+}
+
+/* 컨트롤 버튼 */
+.controls {
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.controls button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.controls button:hover {
+  background: #f0f0f0;
+}
+</style>

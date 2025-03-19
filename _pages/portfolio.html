@@ -1,0 +1,105 @@
+---
+layout: default
+title: "Portfolio Timeline"
+permalink: /portfolio/
+---
+
+
+<div class="portfolio-wrapper mx-auto max-w-screen-xl px-6 py-12">
+  <div class="portfolio-container flex flex-col lg:flex-row lg:justify-between lg:gap-4">
+    <header class="left-nav sticky lg:block lg:w-[35%] lg:pl-8">
+        <!-- 네비게이션 내용: 카테고리 등 -->
+        <nav>
+          <ul class="category-list">
+            {% for category in site.data.categories %}
+            <li class="category-item">
+              <div class="category-header">
+                {{ category.name }}
+                <span class="toggle-icon">▼</span>
+              </div>
+              <ul class="sub-category hidden">
+                {% for project_id in category.projects %}
+                  {% assign project_data = site.data.projects | where: "id", project_id | first %}
+                  <li><a href="#{{ project_data.id }}" class="scroll-link">{{ project_data.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </header>
+      
+    <main id="content" class="lg:w-[65%]">
+      <!-- 메인 콘텐츠: 프로젝트 리스트 등 -->
+      <ul class="project-list">
+        {% for project in site.data.projects %}
+          <li class="project-entry mb-12">
+            <div class="project-container flex flex-col sm:flex-row items-center">
+              <!-- 왼쪽: 프로젝트 이미지 -->
+              <div class="project-image sm:w-1/3">
+                <img src="{{ project.image }}" alt="{{ project.title }}" class="aspect-video object-cover">
+              </div>
+              <!-- 오른쪽: 텍스트 정보 -->
+              <div class="project-info sm:w-2/3 sm:pl-6">
+                <h3 class="project-title text-xl font-bold">
+                  <a href="{{ project.how_to_use | default: project.link }}" target="_blank">
+                    {{ project.title }}
+                  </a>
+                  {% if project.github %}
+                    <span class="external-icon ml-2">🔗</span>
+                  {% endif %}
+                </h3>
+                <p class="project-description mt-2">{{ project.description }}</p>
+                <ul class="project-tech flex flex-wrap mt-2">
+                  {% for tech in project.tech %}
+                    <li class="tech-item">{{ tech }}</li>
+                  {% endfor %}
+                </ul>
+                <div class="project-links mt-4">
+                  {% if project.how_to_use %}
+                    <a href="{{ project.how_to_use }}" target="_blank" class="mr-4 text-blue-600 hover:underline">How to Use</a>
+                  {% endif %}
+                  {% if project.making_of %}
+                    <a href="{{ project.making_of }}" target="_blank" class="text-blue-600 hover:underline">Making Of</a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </main>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  // Smooth Scroll: 내부 링크 클릭 시 부드럽게 스크롤
+  const links = document.querySelectorAll(".scroll-link");
+  links.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+
+  // 카테고리 토글: 카테고리 클릭 시 내부 항목 표시/숨김
+  const categoryHeaders = document.querySelectorAll('.category-header');
+  categoryHeaders.forEach(header => {
+    header.addEventListener('click', function () {
+      // 토글 클래스로 아이콘 회전 효과
+      this.classList.toggle('active');
+      // 바로 다음 형제 요소인 sub-category의 표시/숨김 전환
+      const subCategory = this.nextElementSibling;
+      if (subCategory) {
+        subCategory.classList.toggle('hidden');
+      }
+    });
+  });
+
+});
+</script>

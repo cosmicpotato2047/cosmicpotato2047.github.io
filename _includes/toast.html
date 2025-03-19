@@ -1,0 +1,38 @@
+<div id="toast" class="toast">Coming soon! 🚀</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  showToast("Coming soon! 🚀");
+});
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2000);
+}
+</script>
+
+<style>
+.toast {
+  position: fixed;
+  top: 80px; /* 네비게이션 아래 위치 (네비게이션 높이에 따라 조절 가능) */
+  left: 50%;
+  transform: translateX(-50%); /* 가운데 정렬 */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+}
+</style>

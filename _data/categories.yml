@@ -1,0 +1,11 @@
+- name: "Web Development"
+  id: "web"
+  projects:
+    - "finance-tracker"
+    - "stock-bot"
+
+- name: "AI & Automation"
+  id: "ai"
+  projects:
+    - "ai-music-generator"
+    - "stock-bot"

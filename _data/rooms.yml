@@ -1,0 +1,11 @@
+- id: room-minimal
+  name: Minimal Room
+  image: /assets/images/Van_Gogh_bedroom.png
+
+- id: room-cyberpunk
+  name: Cyberpunk Room
+  image: path-to-cyberpunk-room.jpg
+
+- id: room-nostalgia
+  name: Nostalgia Room
+  image: path-to-nostalgia-room.jpg

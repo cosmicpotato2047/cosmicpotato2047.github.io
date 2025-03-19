@@ -1,0 +1,232 @@
+/* 기본 유틸리티 클래스 */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.max-w-screen-xl {
+  max-width: 1280px; /* 필요에 따라 조정 */
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.hidden {
+  display: none;
+}
+
+/* Flex 관련 */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+/* Responsive: sm (min-width: 640px) */
+@media screen and (min-width: 640px) {
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+  .sm\:w-1\/3 {
+    width: 33.33%;
+  }
+  .sm\:w-2\/3 {
+    width: 66.67%;
+  }
+  .sm\:pl-6 {
+    padding-left: 1.5rem;
+  }
+}
+
+/* Responsive: lg (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+  .lg\:gap-4 {
+    gap: 1rem;
+  }
+  /* Header와 Main의 너비 조정 */
+  .left-nav {
+    width: 35%;
+    padding-left: 2rem; /* lg:pl-8 (Tailwind의 2rem) */
+  }
+  #content {
+    width: 65%;
+  }
+}
+
+/* 포트폴리오 전체 레이아웃 */
+.portfolio-wrapper {
+  /* 중앙 정렬과 최대 너비, 패딩을 Tailwind처럼 재현 */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px; /* max-w-screen-xl */
+  padding: 3rem 1.5rem; /* py-12 px-6 */
+}
+
+/* 포트폴리오 컨테이너 */
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .portfolio-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem; /* lg:gap-4 */
+  }
+}
+
+/* 좌측 네비게이션 (header) */
+.left-nav {
+  background: #fff;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  /* 모바일 기본은 전체 너비; lg에서는 48%로 변경 */
+  width: 100%;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+/* 네비게이션 내부 스타일 */
+.category-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.category-item {
+  border-bottom: 1px solid #eee;
+  padding: 1rem;
+}
+.category-header {
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+.category-header:hover {
+  background-color: #f0f0f0;
+}
+.toggle-icon {
+  transition: transform 0.3s;
+}
+.category-header.active .toggle-icon {
+  transform: rotate(180deg);
+}
+.sub-category {
+  display: none; /* hidden 클래스로 제어 */
+}
+.sub-category.active,
+.sub-category.show {
+  display: block;
+}
+
+/* 메인 콘텐츠 (main#content) */
+#content {
+  /* 기본: 모바일에서는 전체 너비 */
+  width: 100%;
+}
+
+/* 프로젝트 리스트 및 항목 */
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.project-entry {
+  /* 개별 프로젝트 항목 */
+}
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 640px) {
+  .project-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .project-image {
+    width: 33.33%; /* sm:w-1/3 */
+  }
+  .project-info {
+    width: 66.67%; /* sm:w-2/3 */
+    padding-left: 1.5rem; /* sm:pl-6 */
+  }
+}
+
+/* 이미지 스타일 */
+.aspect-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.object-cover {
+  object-fit: cover;
+}
+
+/* 프로젝트 제목 및 설명 */
+.project-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.external-icon {
+  margin-left: 0.5rem;
+}
+.project-description {
+  /* 기본 문단 스타일 */
+}
+
+/* 기술 스택 리스트 */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+.tech-item {
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background-color: #f9f9f9;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+/* 프로젝트 링크 */
+.project-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+.project-links a:hover {
+  text-decoration: underline;
+}
+
