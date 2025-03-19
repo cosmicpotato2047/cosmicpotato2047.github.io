@@ -28,7 +28,7 @@ twitter_username:
 github_username:  cosmicpotato2047
 
 # Build settings
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-include-cache
   - jekyll-feed
