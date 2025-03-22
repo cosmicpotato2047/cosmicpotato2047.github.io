@@ -133,14 +133,13 @@
   background-color: #f0f0f0;
 }
 .toggle-icon {
+  display: inline-block;
   transition: transform 0.3s;
 }
 .category-header.active .toggle-icon {
   transform: rotate(180deg);
 }
-.sub-category {
-  display: none; /* hidden 클래스로 제어 */
-}
+
 .sub-category.active,
 .sub-category.show {
   display: block;
@@ -230,3 +229,14 @@
   text-decoration: underline;
 }
 
+.project-period {
+  font-size: 0.875rem; 
+  color: #6b7280;      
+  font-style: italic;  
+  margin-top: 0.25rem; 
+}
+@media (max-width: 640px) {
+  .project-period {
+    font-size: 0.75rem;
+  }
+}
