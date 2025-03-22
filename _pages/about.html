@@ -5,18 +5,11 @@ permalink: /about/
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
-  /* 원래 것것
-  .center-container {
-    display: flex;
-    flex-direction: column;  /* 세로 방향 정렬 
-    justify-content: center; /* 세로(수직) 중앙 정렬 
-    align-items: center; /* 가로(수평) 중앙 정렬 
-    height: 100vh; /* 화면 전체 높이 
-  }  */
+  
 
   /* 브라우저의 viewport 중앙에 고정 */
   .center-container {
-  position: fixed;  /* 스크롤해도 고정 */
+  /*position: fixed;   스크롤해도 고정 */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* 정확한 중앙 정렬 */
@@ -24,17 +17,8 @@ permalink: /about/
   flex-direction: column;
   justify-content: center; /* 세로 중앙 정렬 */
   align-items: center; /* 가로 중앙 정렬 */
+  min-height: 100vh; /* 최소 높이를 뷰포트 높이로 설정
   }  
-
-  /*스크롤 가능하게 하면면서 보이는 영역의 중앙 정렬
-  .center-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* 최소 높이를 뷰포트 높이로 설정 
-  }  */
-
   .social-links {
   margin-bottom: 30px; /* social-links 아래쪽 여백 추가 */
   }
