@@ -42,13 +42,22 @@ permalink: /portfolio/
               <!-- 오른쪽: 텍스트 정보 -->
               <div class="project-info sm:w-2/3 sm:pl-6">
                 <h3 class="project-title text-xl font-bold">
-                  <a href="{{ project.how_to_use | default: project.link }}" target="_blank">
-                    {{ project.title }}
-                  </a>
-                  {% if project.github %}
+                  {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank">
+                      {{ project.title }}
+                    </a>
+                    {% if project.link %}
                     <span class="external-icon ml-2">🔗</span>
+                    {% endif %}
+                  {% else %}
+                    {{ project.title }}
                   {% endif %}
+                  
                 </h3>
+                
+                <p class="project-period">
+                  📅 {{ project.period }}
+                </p>
                 <p class="project-description mt-2">{{ project.description }}</p>
                 <ul class="project-tech flex flex-wrap mt-2">
                   {% for tech in project.tech %}
@@ -94,7 +103,7 @@ permalink: /portfolio/
       // 토글 클래스로 아이콘 회전 효과
       this.classList.toggle('active');
       // 바로 다음 형제 요소인 sub-category의 표시/숨김 전환
-      const subCategory = this.nextElementSibling;
+      const subCategory = this.parentElement.querySelector('.sub-category');
       if (subCategory) {
         subCategory.classList.toggle('hidden');
       }
