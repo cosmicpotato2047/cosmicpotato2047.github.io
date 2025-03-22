@@ -43,12 +43,10 @@ permalink: /portfolio/
               <div class="project-info sm:w-2/3 sm:pl-6">
                 <h3 class="project-title text-xl font-bold">
                   {% if project.link %}
-                    <a href="{{ project.link }}" target="_blank">
+                    <a href="{{ project.link }}" target="_blank" rel="noopener" >
                       {{ project.title }}
                     </a>
-                    {% if project.link %}
                     <span class="external-icon ml-2">🔗</span>
-                    {% endif %}
                   {% else %}
                     {{ project.title }}
                   {% endif %}
