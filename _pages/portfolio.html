@@ -46,7 +46,6 @@ permalink: /portfolio/
                     <a href="{{ project.link }}" target="_blank" rel="noopener" >
                       {{ project.title }}
                     </a>
-                    <span class="external-icon ml-2">🔗</span>
                   {% else %}
                     {{ project.title }}
                   {% endif %}
@@ -57,19 +56,19 @@ permalink: /portfolio/
                   📅 {{ project.period }}
                 </p>
                 <p class="project-description mt-2">{{ project.description }}</p>
+                <div class="project-links mt-4">
+                  {% if project.making_of %}
+                    <a href="{{ project.making_of }}" target="_blank" class="text-blue-600 hover:underline">Making Of</a>
+                  {% endif %}
+                  {% if project.how_to_use %}
+                    <a href="{{ project.how_to_use }}" target="_blank" class="mr-4 text-blue-600 hover:underline">How to Use</a>
+                  {% endif %}
+                </div>
                 <ul class="project-tech flex flex-wrap mt-2">
                   {% for tech in project.tech %}
                     <li class="tech-item">{{ tech }}</li>
                   {% endfor %}
                 </ul>
-                <div class="project-links mt-4">
-                  {% if project.how_to_use %}
-                    <a href="{{ project.how_to_use }}" target="_blank" class="mr-4 text-blue-600 hover:underline">How to Use</a>
-                  {% endif %}
-                  {% if project.making_of %}
-                    <a href="{{ project.making_of }}" target="_blank" class="text-blue-600 hover:underline">Making Of</a>
-                  {% endif %}
-                </div>
               </div>
             </div>
           </li>
