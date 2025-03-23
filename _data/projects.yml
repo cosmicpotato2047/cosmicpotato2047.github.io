@@ -4,7 +4,7 @@
   description: "This website you are currently visiting"
   image: "/assets/images/my-portfolio.png"
   tech: ["Jekyll", "Markdown", "GitHub Pages"]
-  link: "https://cosmicpotato2047.github.io/about/"
+  link: "https://cosmicpotato2047.github.io/try-it/"
   how_to_use: "https://github.com/cosmicpotato2047/cosmicpotato2047.github.io"
   making_of: "/projects/my-portfolio-making/"
   
