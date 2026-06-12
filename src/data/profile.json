@@ -4,12 +4,11 @@
   "tagline": { "ko": "경험 수집가", "en": "experience collector" },
   "avatar": "/avatar.jpg",
   "intro": {
-    "ko": "죽기 전에 새로운 경험을 잔뜩 하고 싶어요. 오로라를 제 눈으로 직접 못 보고 죽으면 억울할 것 같거든요!",
-    "en": "On a mission to experience as much of the world as possible. No way I'm dying before seeing the Northern Lights with my own eyes."
+    "ko": "죽기 전에 새롭고 다양한 경험을\n잔뜩 하다 가는 게 인생 목표입니다.\n가령...\n오로라를 제 눈으로 직접 못 보고 죽으면\n살짝 억울할 것 같거든요!",
+    "en": "On a mission to experience\nas much of the world as possible.\n\nNo way I'm dying before seeing\nthe Northern Lights with my own eyes."
   },
   "links": [
-    { "type": "writing", "icon": "/icons/writing.png", "url": "https://litt.ly/REPLACE_ME" },
-    { "type": "photo",   "icon": "/icons/photo.png",   "url": "https://instagram.com/REPLACE_ME" },
-    { "type": "video",   "icon": "/icons/video.png",   "url": "https://youtube.com/@REPLACE_ME" }
+    { "type": "writing", "icon": "/icons/book-open.svg", "url": "https://litt.ly/chanheelee" },
+    { "type": "photo",   "icon": "/icons/instagram.svg", "url": "https://www.instagram.com/hi_there1.414/" }
   ]
 }

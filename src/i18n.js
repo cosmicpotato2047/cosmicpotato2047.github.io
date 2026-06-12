@@ -10,12 +10,13 @@ const DICT = {
   tab_world: { ko: 'world', en: 'world' },
   tab_timeline: { ko: 'timeline', en: 'timeline' },
 
+  // 부제/힌트는 KO에서도 영어 유지(Chan 요청) — 양쪽 같은 영어 문구
   world_title: { ko: 'WORLD MAP', en: 'WORLD MAP' },
-  world_subtitle: { ko: '여기까지의 여행', en: 'the journey so far' },
-  world_hint: { ko: '지구를 눌러보세요', en: 'click the globe' },
+  world_subtitle: { ko: 'the journey so far', en: 'the journey so far' },
+  world_hint: { ko: 'click the globe', en: 'click the globe' },
 
   timeline_title: { ko: 'TIMELINE', en: 'TIMELINE' },
-  timeline_subtitle: { ko: '여행의 기록', en: 'a record of the journey' },
+  timeline_subtitle: { ko: 'a record of the journey', en: 'a record of the journey' },
 
   sheet_visited: { ko: 'VISITED', en: 'VISITED' },
   sheet_upcoming: { ko: 'UPCOMING', en: 'UPCOMING' },
@@ -84,9 +85,9 @@ export function createLangToggle() {
 
   const render = () => {
     el.innerHTML = `
-      <span class="${current === 'ko' ? 'on' : ''}">KO</span>
+      <span class="${current === 'en' ? 'on' : ''}">EN</span>
       <span class="sep">/</span>
-      <span class="${current === 'en' ? 'on' : ''}">EN</span>`
+      <span class="${current === 'ko' ? 'on' : ''}">KO</span>`
   }
   render()
   el.addEventListener('click', toggleLang)

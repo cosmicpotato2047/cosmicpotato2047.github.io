@@ -4,10 +4,10 @@ import countries from '../data/countries.json'
 import { t, ui, getLang, onLangChange } from '../i18n.js'
 
 const PROJECT_ICON = {
-  ebook: '/icons/writing.png',
-  youtube: '/icons/video.png',
-  instagram: '/icons/photo.png',
-  other: '/icons/writing.png',
+  ebook: '/icons/book-open.svg',
+  youtube: '/icons/youtube.svg',
+  instagram: '/icons/instagram.svg',
+  other: '/icons/book-open.svg',
 }
 
 export function createSheet() {

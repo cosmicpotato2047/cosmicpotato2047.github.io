@@ -16,7 +16,7 @@
           "ko": "미국에서 쓴 첫 기록",
           "en": "My first travel ebook, written in the US"
         },
-        "url": "https://litt.ly/REPLACE_ME"
+        "url": "https://litt.ly/chanheelee"
       }
     ]
   },
@@ -26,8 +26,8 @@
     "name_ko": "일본",
     "lat": 36,
     "lng": 138,
-    "globe_x": 96,
-    "globe_y": 64,
+    "globe_x": 72,
+    "globe_y": 52,
     "status": "upcoming",
     "period": "2026.06 – 2026.08",
     "projects": []

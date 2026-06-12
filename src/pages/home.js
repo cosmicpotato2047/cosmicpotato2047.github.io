@@ -1,6 +1,6 @@
 // Home (#home) — 종이→우주 그라데이션 명함. 전부 profile.json에서 렌더.
 import profile from '../data/profile.json'
-import { t, onLangChange } from '../i18n.js'
+import { t, getLang, onLangChange } from '../i18n.js'
 
 export function renderHome(container) {
   const page = document.createElement('div')
@@ -13,8 +13,8 @@ export function renderHome(container) {
         <img class="home__avatar" src="${profile.avatar}" alt="${profile.name_en}"
              onerror="this.classList.add('img--missing')" />
 
-        <h1 class="home__name">${profile.name_ko}</h1>
-        <p class="home__name-en">${profile.name_en}</p>
+        <h1 class="home__name">${getLang() === 'ko' ? profile.name_ko : profile.name_en}</h1>
+        <p class="home__name-en">${getLang() === 'ko' ? profile.name_en : profile.name_ko}</p>
 
         <p class="home__tagline">${t(profile.tagline)}</p>
 
@@ -36,9 +36,10 @@ export function renderHome(container) {
       <footer class="home__footer" aria-hidden="true">
         <div class="home__stars"></div>
         <div class="home__planet">
-          <img class="home__fox" src="/fox.png" alt="" onerror="this.classList.add('img--missing')" />
           <img class="home__rose" src="/rose.png" alt="" onerror="this.classList.add('img--missing')" />
+          <img class="home__fox" src="/fox.png" alt="" onerror="this.classList.add('img--missing')" />
         </div>
+        <p class="home__credit">inspired by Le Petit Prince</p>
       </footer>
     `
     sprinkleStars(page.querySelector('.home__stars'))
