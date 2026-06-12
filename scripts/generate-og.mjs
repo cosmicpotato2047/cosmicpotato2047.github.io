@@ -96,6 +96,8 @@ function canvas(w, h) {
   return {
     w, h, data,
     set(x, y, [r, g, b, a = 255]) {
+      x = Math.round(x)
+      y = Math.round(y)
       if (x < 0 || y < 0 || x >= w || y >= h) return
       const i = (y * w + x) * 4
       const af = a / 255
@@ -108,6 +110,8 @@ function canvas(w, h) {
 }
 // 디코딩한 이미지를 nearest-neighbor로 스케일 + 알파 합성
 function blit(dst, src, dx, dy, dw, dh) {
+  dx = Math.round(dx)
+  dy = Math.round(dy)
   for (let y = 0; y < dh; y++) {
     const sy = Math.min(src.height - 1, Math.floor((y * src.height) / dh))
     for (let x = 0; x < dw; x++) {
