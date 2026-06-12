@@ -13,7 +13,7 @@ const DICT = {
   // 부제/힌트는 KO에서도 영어 유지(Chan 요청) — 양쪽 같은 영어 문구
   world_title: { ko: 'WORLD MAP', en: 'WORLD MAP' },
   world_subtitle: { ko: 'the journey so far', en: 'the journey so far' },
-  world_hint: { ko: 'click the globe', en: 'click the globe' },
+  world_hint: { ko: 'tap the globe', en: 'tap the globe' },
 
   timeline_title: { ko: 'TIMELINE', en: 'TIMELINE' },
   timeline_subtitle: { ko: 'a record of the journey', en: 'a record of the journey' },
