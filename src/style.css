@@ -89,16 +89,18 @@ a {
   width: 100%;
   max-width: var(--maxw);
   margin: 0 auto;
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
   background: var(--paper);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
+/* 콘텐츠만 스크롤되고 탭바는 항상 화면 하단에 고정(앱 셸) */
 .content {
-  min-height: 100vh;
-  min-height: 100dvh;
-  padding-bottom: var(--tabbar-h);
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
 }
 
@@ -137,11 +139,8 @@ a {
    하단 탭바
    ============================================================ */
 .tabbar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: var(--tabbar-h);
+  flex: none;
+  min-height: var(--tabbar-h);
   display: flex;
   align-items: stretch;
   border-top: 1px solid rgba(0, 0, 0, 0.07);
@@ -360,7 +359,7 @@ a {
    TIMELINE
    ============================================================ */
 .timeline {
-  min-height: calc(100dvh - var(--tabbar-h));
+  min-height: 100%;
   background: var(--paper);
 }
 .timeline__track {
@@ -467,7 +466,7 @@ a {
    ============================================================ */
 .world {
   position: relative;
-  min-height: calc(100dvh - var(--tabbar-h));
+  min-height: 100%;
   background: var(--space);
   color: #fff;
   overflow: hidden;
