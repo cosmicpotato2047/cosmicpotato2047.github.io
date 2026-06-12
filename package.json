@@ -1,0 +1,16 @@
+{
+  "name": "cosmicpotato2047-site",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "description": "Chan Lee personal site — pixel RPG / Le Petit Prince theme",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "gen:placeholders": "node scripts/generate-placeholders.mjs"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

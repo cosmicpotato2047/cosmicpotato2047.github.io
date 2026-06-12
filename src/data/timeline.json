@@ -1,0 +1,32 @@
+[
+  {
+    "year": 2026,
+    "open_by_default": true,
+    "entries": [
+      {
+        "title": { "ko": "일본 2개월 종단 여행", "en": "2-month journey across Japan" },
+        "desc": { "ko": "46개 지역, 유튜브 + 전자책", "en": "46 regions, YouTube + ebook" },
+        "tags": ["travel", "youtube"],
+        "url": null
+      },
+      {
+        "title": { "ko": "개인 사이트 오픈", "en": "Launched this site" },
+        "desc": { "ko": "바로 이 사이트", "en": "the one you're on" },
+        "tags": ["build"],
+        "url": null
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "open_by_default": false,
+    "entries": [
+      {
+        "title": { "ko": "미국 여행 + 전자책 출간", "en": "US trip + ebook" },
+        "desc": { "ko": "첫 해외 기록을 책으로", "en": "My first overseas record, as a book" },
+        "tags": ["travel", "ebook"],
+        "url": "https://litt.ly/REPLACE_ME"
+      }
+    ]
+  }
+]

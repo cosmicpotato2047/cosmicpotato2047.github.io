@@ -1,0 +1,47 @@
+[
+  {
+    "id": "us",
+    "name": "United States",
+    "name_ko": "미국",
+    "lat": 38,
+    "lng": -97,
+    "globe_x": 42,
+    "globe_y": 30,
+    "status": "visited",
+    "period": "2025",
+    "projects": [
+      {
+        "type": "ebook",
+        "title": {
+          "ko": "미국에서 쓴 첫 기록",
+          "en": "My first travel ebook, written in the US"
+        },
+        "url": "https://litt.ly/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "jp",
+    "name": "Japan",
+    "name_ko": "일본",
+    "lat": 36,
+    "lng": 138,
+    "globe_x": 96,
+    "globe_y": 64,
+    "status": "upcoming",
+    "period": "2026.06 – 2026.08",
+    "projects": []
+  },
+  {
+    "id": "fr",
+    "name": "France",
+    "name_ko": "프랑스",
+    "lat": 46,
+    "lng": 2,
+    "globe_x": 60,
+    "globe_y": 26,
+    "status": "planned",
+    "period": "2027~",
+    "projects": []
+  }
+]
