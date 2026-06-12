@@ -648,6 +648,7 @@ a {
   display: flex;
   flex-direction: column;
   background: var(--paper);
+  color: var(--ink); /* .world의 흰색 상속을 끊고 시트는 종이톤 잉크색으로 */
   border-radius: 20px 20px 0 0;
   transform: translateY(100%);
   transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
