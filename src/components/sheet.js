@@ -102,7 +102,7 @@ export function createSheet() {
           <h2 class="detail__name">${pickName(c)}</h2>
           <span class="pill pill--${c.status}">${ui('status_' + c.status)}</span>
         </div>
-        <p class="detail__period">${c.period || ''}</p>
+        <p class="detail__period">${t(c.period) || ''}</p>
         <div class="detail__projects">${projects}</div>
       </div>
     `
@@ -125,8 +125,9 @@ export function createSheet() {
     const summary = c.projects && c.projects.length ? t(c.projects[0].title) : ''
     return `
       <button class="ccard ccard--${c.status}" data-country="${c.id}" type="button">
+        <span class="ccard__chev" aria-hidden="true">›</span>
         <span class="ccard__name">${pickName(c)}</span>
-        <span class="ccard__period">${c.period || ''}</span>
+        <span class="ccard__period">${t(c.period) || ''}</span>
         ${summary ? `<span class="ccard__summary">${summary}</span>` : ''}
       </button>`
   }
@@ -136,8 +137,9 @@ export function createSheet() {
   }
 
   function pickName(c) {
-    // 언어에 따라 표시명 선택(ko면 name_ko, 아니면 영문 name)
-    return getLang() === 'ko' ? c.name_ko || c.name : c.name
+    // 언어에 따라 표시명 선택(ko면 name_ko, 아니면 영문 name) + 국기/이모지 병기
+    const name = getLang() === 'ko' ? c.name_ko || c.name : c.name
+    return (c.emoji ? c.emoji + ' ' : '') + name
   }
 
   // 언어 전환 시 열려 있으면 다시 그림

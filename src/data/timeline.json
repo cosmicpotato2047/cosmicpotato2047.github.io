@@ -4,28 +4,109 @@
     "open_by_default": true,
     "entries": [
       {
-        "title": { "ko": "일본 2개월 종단 여행", "en": "2-month journey across Japan" },
-        "desc": { "ko": "46개 지역, 유튜브 + 전자책", "en": "46 regions, YouTube + ebook" },
-        "tags": ["travel", "youtube"],
-        "url": null
-      },
-      {
-        "title": { "ko": "개인 사이트 오픈", "en": "Launched this site" },
-        "desc": { "ko": "바로 이 사이트", "en": "the one you're on" },
-        "tags": ["build"],
+        "title": { "ko": "진행 중", "en": "In progress" },
+        "desc": { "ko": "2027년 초에 갱신 예정", "en": "To be updated in early 2027" },
+        "tags": ["ongoing"],
         "url": null
       }
     ]
   },
   {
     "year": 2025,
+    "open_by_default": true,
+    "entries": [
+      {
+        "title": { "ko": "1학기 7전공(컴퓨터공학) 21학점", "en": "Spring: 7 CS major courses, 21 credits" },
+        "desc": { "ko": "밥 먹고 잠자고 진짜 공부만 함", "en": "Eat, sleep, study, repeat." },
+        "tags": ["study"],
+        "url": null
+      },
+      {
+        "title": {
+          "ko": "여름방학 삼성전자서비스 현장실습 (교내 후기 공모전 대상 수상)",
+          "en": "Summer internship at Samsung Electronics Service (Grand Prize, campus essay contest)"
+        },
+        "desc": {
+          "ko": "도봉구에서 에어컨 수리 보조로 여름을 보냄",
+          "en": "Spent the summer assisting AC repairs in Seoul's Dobong district."
+        },
+        "tags": ["internship", "award"],
+        "url": null
+      },
+      {
+        "title": { "ko": "AWS SAA 합격", "en": "Passed the AWS SAA" },
+        "desc": { "ko": "취득일자: 2025.10.27", "en": "Certified Oct 27, 2025." },
+        "tags": ["cert"],
+        "url": null
+      },
+      {
+        "title": { "ko": "RCY 봉사 동아리 부원", "en": "Red Cross Youth (RCY) club member" },
+        "desc": {
+          "ko": "• 2025.10.11 RCY 연합 제빵 봉사 (대한적십자사 서울지사, 성동구 마장동)\n• 2025.10.25 RCY 뛰놀자 지구 행사 봉사 (노원 에코센터)\n• 2025.11.01 RCY 연탄 봉사 (개미마을, 사단법인 오픈월드 협력)",
+          "en": "• Oct 11 — RCY joint baking day (Korean Red Cross Seoul Chapter, Majang-dong)\n• Oct 25 — RCY \"Play, Planet!\" eco event (Nowon Eco Center)\n• Nov 1 — RCY coal-briquette delivery (Gaemi Village, with Open World)"
+        },
+        "tags": ["volunteer"],
+        "url": null
+      },
+      {
+        "title": { "ko": "기업 탐방", "en": "Company visits" },
+        "desc": {
+          "ko": "• 2025.11.06 NHN 기업 탐방 (주관 OPENUP)\n• 2025.11.10 금융결제원 탐방 (주관 서울과학기술대학교)",
+          "en": "• Nov 6 — NHN (hosted by OPENUP)\n• Nov 10 — Korea Financial Telecommunications & Clearings Institute (hosted by SeoulTech)"
+        },
+        "tags": ["career"],
+        "url": null
+      },
+      {
+        "title": { "ko": "그 외", "en": "Other" },
+        "desc": {
+          "ko": "• 오픈소스 컨트리뷰션 아카데미(체험형) — Git 활용 & LLM Journey with Ollama (2025.4.17–5.27)\n• 청년인생설계학교 리더십 코스 — 매주 화, 5회 (2025.7.22–8.19, 서울특별시)\n• 직무부트캠프 — 매주 토, 5회 (2025.7.26–8.23, 코멘토)\n• 릴레이 글로벌 취·창업 톡톡톡 — 오스트리아 빈 (2025.11.13, 세계한인무역협회)",
+          "en": "• Open-source contribution academy — Git & an LLM journey with Ollama (Apr 17 – May 27)\n• Youth life-design school, leadership course — 5 weekly sessions (Jul 22 – Aug 19, City of Seoul)\n• Career bootcamp — 5 weekly sessions (Jul 26 – Aug 23, Comento)\n• Global careers & startup talk relay — Vienna, Austria (Nov 13, World-OKTA)"
+        },
+        "tags": ["growth"],
+        "url": null
+      }
+    ]
+  },
+  {
+    "year": 2024,
     "open_by_default": false,
     "entries": [
       {
-        "title": { "ko": "미국 여행 + 전자책 출간", "en": "US trip + ebook" },
-        "desc": { "ko": "첫 해외 기록을 책으로", "en": "My first overseas record, as a book" },
-        "tags": ["travel", "ebook"],
-        "url": "https://litt.ly/chanheelee"
+        "title": { "ko": "전역", "en": "Discharged from the military" },
+        "desc": { "ko": "2022.12.20 – 2024.06.19", "en": "Dec 20, 2022 – Jun 19, 2024" },
+        "tags": ["milestone"],
+        "url": null
+      },
+      {
+        "title": { "ko": "2학기 창업 교과목 3개", "en": "Fall: three entrepreneurship courses" },
+        "desc": {
+          "ko": "창업은 취업보다 어렵구나. 안 하면 안 되는 사람들이 해야 하는구나.",
+          "en": "Turns out starting a company is harder than getting a job — it's for those who have no choice but to do it."
+        },
+        "tags": ["study", "reflection"],
+        "url": null
+      },
+      {
+        "title": { "ko": "국제학생회(ISC) 부원", "en": "International Student Council (ISC) member" },
+        "desc": {
+          "ko": "교환학생으로 온 외국인 친구들의 학교 생활을 도움.",
+          "en": "Helped exchange students settle into life on campus."
+        },
+        "tags": ["community"],
+        "url": null
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "open_by_default": false,
+    "entries": [
+      {
+        "title": { "ko": "군인", "en": "Serving in the military" },
+        "desc": { "ko": "2022.12.20 – 2024.06.19", "en": "Dec 20, 2022 – Jun 19, 2024" },
+        "tags": ["milestone"],
+        "url": null
       }
     ]
   }

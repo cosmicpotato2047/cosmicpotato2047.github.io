@@ -440,6 +440,7 @@ a {
   color: var(--ink-soft);
   margin: 0 0 8px;
   line-height: 1.6;
+  white-space: pre-line; /* desc의 \n(불릿 목록 등)을 줄바꿈으로 */
 }
 .tl-entry__tags {
   display: flex;
@@ -705,6 +706,7 @@ a {
   gap: 10px;
 }
 .ccard {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -714,7 +716,17 @@ a {
   border: none;
   border-left: 4px solid var(--ink-faint);
   border-radius: 10px;
-  padding: 12px 14px;
+  padding: 12px 30px 12px 14px;
+}
+/* "눌러서 상세 보기" 신호 (disclosure) */
+.ccard__chev {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  line-height: 1;
+  color: var(--ink-faint);
 }
 .ccard--visited {
   border-left-color: var(--visited);

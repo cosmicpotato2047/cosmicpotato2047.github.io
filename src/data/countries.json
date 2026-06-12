@@ -3,20 +3,19 @@
     "id": "us",
     "name": "United States",
     "name_ko": "미국",
+    "emoji": "🇺🇸",
     "lat": 38,
     "lng": -97,
-    "globe_x": 42,
-    "globe_y": 30,
     "status": "visited",
-    "period": "2025",
+    "period": "2026.02.02 – 02.17",
     "projects": [
       {
         "type": "ebook",
         "title": {
-          "ko": "미국에서 쓴 첫 기록",
-          "en": "My first travel ebook, written in the US"
+          "ko": "미국 여행 전자책 — 워싱턴 DC · 뉴욕 · 나이아가라 폭포",
+          "en": "US travel ebook — Washington D.C., New York, Niagara Falls"
         },
-        "url": "https://litt.ly/chanheelee"
+        "url": "https://litt.ly/chanheelee/sale/X6JTiZ1"
       }
     ]
   },
@@ -24,24 +23,66 @@
     "id": "jp",
     "name": "Japan",
     "name_ko": "일본",
+    "emoji": "🇯🇵",
     "lat": 36,
     "lng": 138,
-    "globe_x": 72,
-    "globe_y": 52,
     "status": "upcoming",
-    "period": "2026.06 – 2026.08",
+    "period": { "ko": "2026 여름 · 약 2개월", "en": "Summer 2026 · ~2 months" },
     "projects": []
   },
   {
-    "id": "fr",
-    "name": "France",
-    "name_ko": "프랑스",
-    "lat": 46,
-    "lng": 2,
-    "globe_x": 60,
-    "globe_y": 26,
+    "id": "eu",
+    "name": "Europe",
+    "name_ko": "유럽",
+    "emoji": "🇪🇺",
+    "lat": 50,
+    "lng": 10,
     "status": "planned",
-    "period": "2027~",
+    "period": { "ko": "다음 여정", "en": "up next" },
+    "projects": []
+  },
+  {
+    "id": "af",
+    "name": "Africa",
+    "name_ko": "아프리카",
+    "emoji": "🌍",
+    "lat": 0,
+    "lng": 20,
+    "status": "planned",
+    "period": { "ko": "언젠가", "en": "someday" },
+    "projects": []
+  },
+  {
+    "id": "sa",
+    "name": "South America",
+    "name_ko": "남미",
+    "emoji": "🌎",
+    "lat": -15,
+    "lng": -60,
+    "status": "planned",
+    "period": { "ko": "언젠가", "en": "someday" },
+    "projects": []
+  },
+  {
+    "id": "oc",
+    "name": "Oceania",
+    "name_ko": "오세아니아",
+    "emoji": "🌏",
+    "lat": -25,
+    "lng": 135,
+    "status": "planned",
+    "period": { "ko": "언젠가", "en": "someday" },
+    "projects": []
+  },
+  {
+    "id": "gl",
+    "name": "Greenland",
+    "name_ko": "그린란드",
+    "emoji": "🇬🇱",
+    "lat": 72,
+    "lng": -40,
+    "status": "planned",
+    "period": { "ko": "언젠가 · 오로라", "en": "someday · the aurora" },
     "projects": []
   }
 ]

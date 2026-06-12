@@ -9,11 +9,20 @@ dist-ssr
 .vite
 *.local
 
-# editor
+# secrets / env
+.env
+.env.*
+!.env.example
+
+# editor / OS
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
+
+# claude code local overrides (launch.json은 추적 유지)
+.claude/settings.local.json
 
 # logs
 npm-debug.log*
