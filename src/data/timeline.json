@@ -73,7 +73,7 @@
     "open_by_default": false,
     "entries": [
       {
-        "title": { "ko": "전역", "en": "Discharged from the military" },
+        "title": { "ko": "군인", "en": "Serving in the military" },
         "desc": { "ko": "2022.12.20 – 2024.06.19", "en": "Dec 20, 2022 – Jun 19, 2024" },
         "tags": ["milestone"],
         "url": null
