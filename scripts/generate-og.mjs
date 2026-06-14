@@ -36,13 +36,33 @@ function encodePNG(w, h, rgba) {
   ihdr.writeUInt32BE(h, 4)
   ihdr[8] = 8
   ihdr[9] = 6
-  const stride = w * 4
+  const stride = w * 4, bpp = 4
   const raw = Buffer.alloc((stride + 1) * h)
+  let prev = Buffer.alloc(stride)
   for (let y = 0; y < h; y++) {
-    raw[y * (stride + 1)] = 0
-    rgba.copy(raw, y * (stride + 1) + 1, y * stride, y * stride + stride)
+    const cur = rgba.subarray(y * stride, y * stride + stride)
+    // 적응형 필터: 스캔라인마다 5종 중 최소합 선택 (압축률↑)
+    let best = null
+    for (let f = 0; f < 5; f++) {
+      const o = Buffer.alloc(stride)
+      for (let i = 0; i < stride; i++) {
+        const a = i >= bpp ? cur[i - bpp] : 0, b = prev[i], c = i >= bpp ? prev[i - bpp] : 0
+        let v = cur[i]
+        if (f === 1) v = (cur[i] - a) & 255
+        else if (f === 2) v = (cur[i] - b) & 255
+        else if (f === 3) v = (cur[i] - ((a + b) >> 1)) & 255
+        else if (f === 4) v = (cur[i] - paeth(a, b, c)) & 255
+        o[i] = v
+      }
+      let sum = 0
+      for (let i = 0; i < stride; i++) sum += o[i] < 128 ? o[i] : 256 - o[i]
+      if (!best || sum < best.sum) best = { f, o, sum }
+    }
+    raw[y * (stride + 1)] = best.f
+    best.o.copy(raw, y * (stride + 1) + 1)
+    prev = cur
   }
-  return Buffer.concat([sig, chunk('IHDR', ihdr), chunk('IDAT', deflateSync(raw)), chunk('IEND', Buffer.alloc(0))])
+  return Buffer.concat([sig, chunk('IHDR', ihdr), chunk('IDAT', deflateSync(raw, { level: 9 })), chunk('IEND', Buffer.alloc(0))])
 }
 
 // ---------- PNG 디코더 (8-bit RGBA, non-interlaced) ----------
