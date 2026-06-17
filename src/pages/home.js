@@ -36,8 +36,9 @@ export function renderHome(container) {
       <footer class="home__footer" aria-hidden="true">
         <div class="home__stars"></div>
         <div class="home__planet">
-          <img class="home__rose" src="/rose.png" alt="" onerror="this.classList.add('img--missing')" />
-          <img class="home__fox" src="/fox.png" alt="" onerror="this.classList.add('img--missing')" />
+          <img class="home__planet-bg" src="/asteroid.png" alt="" loading="lazy" decoding="async" onerror="this.classList.add('img--missing')" />
+          <img class="home__rose" src="/rose.png" alt="" loading="lazy" decoding="async" onerror="this.classList.add('img--missing')" />
+          <img class="home__fox" src="/fox.png" alt="" loading="lazy" decoding="async" onerror="this.classList.add('img--missing')" />
         </div>
         <p class="home__credit">inspired by Le Petit Prince</p>
       </footer>
