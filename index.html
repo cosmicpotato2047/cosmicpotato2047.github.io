@@ -19,8 +19,18 @@
       self-host로 교체 권장(SPEC 5장). Galmuri: SIL OFL / Pretendard: SIL OFL.
     -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quiple/galmuri@latest/dist/galmuri11.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css" />
+    <!--
+      비차단(async) 로드: media=print로 받아서 첫 페인트를 막지 않고, 로드되면 적용.
+      Pretendard는 dynamic-subset → 페이지에 실제 쓰인 글자 조각만 다운로드.
+    -->
+    <link rel="stylesheet" media="print" onload="this.media='all'"
+          href="https://cdn.jsdelivr.net/gh/quiple/galmuri@latest/dist/galmuri11.css" />
+    <link rel="stylesheet" media="print" onload="this.media='all'"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard-dynamic-subset.css" />
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quiple/galmuri@latest/dist/galmuri11.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard-dynamic-subset.css" />
+    </noscript>
   </head>
   <body>
     <div id="app"></div>
