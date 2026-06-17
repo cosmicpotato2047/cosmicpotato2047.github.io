@@ -57,11 +57,10 @@ img {
   display: block;
   max-width: 100%;
 }
-/* 모든 픽셀 이미지/캔버스 픽셀 렌더링 (SPEC 5장) */
+/* 픽셀아트 이미지에만 픽셀 렌더링 (SPEC 5장). avatar는 사진이라 제외(부드럽게). */
 .globe__img,
 .globe__char,
 .loader__char,
-.home__avatar,
 .home__fox,
 .home__rose {
   image-rendering: pixelated;
