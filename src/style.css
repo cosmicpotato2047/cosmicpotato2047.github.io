@@ -22,7 +22,7 @@
   --accent-soft: #c9b8f5;
 
   --radius: 14px;
-  --font-pixel: "Galmuri11", "DungGeunMo", monospace; /* 제목·UI 라벨 */
+  --font-pixel: "Nanum Gothic Coding", "DungGeunMo", monospace; /* 제목·UI 라벨 (단정한 고정폭) */
   --font-body: "Pretendard", system-ui, sans-serif; /* 본문 */
 
   --tabbar-h: 64px;

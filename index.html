@@ -19,16 +19,18 @@
       self-host로 교체 권장(SPEC 5장). Galmuri: SIL OFL / Pretendard: SIL OFL.
     -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!--
-      비차단(async) 로드: media=print로 받아서 첫 페인트를 막지 않고, 로드되면 적용.
-      Pretendard는 dynamic-subset → 페이지에 실제 쓰인 글자 조각만 다운로드.
+      제목·UI: Nanum Gothic Coding(단정한 고정폭) — Google Fonts에서 자동 글자 서브셋.
+      본문: Pretendard dynamic-subset. 둘 다 비차단(media=print/onload)으로 첫 페인트를 막지 않음.
     -->
     <link rel="stylesheet" media="print" onload="this.media='all'"
-          href="https://cdn.jsdelivr.net/gh/quiple/galmuri@latest/dist/galmuri11.css" />
+          href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" />
     <link rel="stylesheet" media="print" onload="this.media='all'"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard-dynamic-subset.css" />
     <noscript>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quiple/galmuri@latest/dist/galmuri11.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard-dynamic-subset.css" />
     </noscript>
   </head>
